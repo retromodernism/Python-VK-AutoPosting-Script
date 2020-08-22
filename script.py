@@ -39,18 +39,18 @@ def post(img):
 
 # auto posting
 while True:
-	dir = walk(img_path)
-	for adress, dirs, files in dir:
-		for img in files:
-			if img not in posted:
-				try:
-					post(img)
-				except:
-					sleep(30)
-				else:
-					posted += img + ';'
-					config['posted'] = posted
-					with open('config.json', w) as cfg:
-						json.dump(config, cfg)
-					sleep(posting_speed)
-                
+    dir = walk(img_path)
+    for adress, dirs, files in dir:
+        for img in files:
+            if img not in posted:
+                try:
+                    post(img)
+                except:
+                    sleep(5)
+                else:
+                    posted += img + ';'
+                    config['posted'] = posted
+                    with open('config.json', 'w') as cfg:
+                        json.dump(config, cfg)
+                    sleep(posting_speed)
+            
