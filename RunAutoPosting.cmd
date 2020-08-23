@@ -1,0 +1,1 @@
+PowerShell -ExecutionPolicy Unrestricted -File "C:\Users\AI\Desktop\AutoPosting Script Python\start.ps1"

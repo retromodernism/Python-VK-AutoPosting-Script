@@ -1,8 +1,8 @@
 from os import walk
 from time import time, sleep
-import vk
 import json
 import requests
+import vk
 
 # set variables
 with open('config.json') as cfg:
